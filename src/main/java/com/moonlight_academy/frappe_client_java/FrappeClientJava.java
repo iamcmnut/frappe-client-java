@@ -19,7 +19,7 @@ public class FrappeClientJava
 	}
     
     public void login(String username, String password) throws AuthException {
-    	if (username.isBlank() || password.isEmpty()) {
+    	if (username == null || username.length() == 0 || password == null || password.length() == 0) {
     		throw new AuthException();
     	} else {
     		System.out.println("OK");
